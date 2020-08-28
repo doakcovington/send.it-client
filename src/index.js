@@ -4,6 +4,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import { createStore, applyMiddleware } from 'redux';
+import { Provider } from 'redux';
+import { thunk } from 'redux-thunk';
 
 ReactDOM.render(
   <React.StrictMode>

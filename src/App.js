@@ -1,5 +1,8 @@
 import React from 'react';
 
+//components
+import Login from './components/Login';
+
 class App extends React.Component {
 
   render() {
@@ -10,6 +13,7 @@ class App extends React.Component {
             We Don't Go To Ravenholm
           </p>
         </header>
+        <Login />
       </div>
     );
   }

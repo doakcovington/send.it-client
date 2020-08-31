@@ -3,4 +3,4 @@ export const updateLoginForm = (formData) => {
       type: "UPDATE_LOGIN_FORM",
       formData
     }
-  }
+}

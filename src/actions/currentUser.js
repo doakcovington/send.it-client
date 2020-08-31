@@ -1,18 +1,19 @@
 export const setCurrentUser = user => {
     return {
-        type: "SET_CURRENT_USER",
-        user: user
+      type: "SET_CURRENT_USER",
+      user
     }
 }
 
-export const login = credentials => {
+export const login = (credentials, history) => {
     return dispatch => {
-        return fetch("https://localhost5000/api/v1/login", {
+      return fetch("http://localhost:5000/api/v1/login", {
+            credentials: "include",
             method: "POST",
             headers: {
-                "Content-Type": "application/json"
+            "Content-Type": "application/json"
             },
-            body: JSON.stringify({username: "doak", password: "123"})
+            body: JSON.stringify(credentials)
         })
     }
 }

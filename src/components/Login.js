@@ -4,8 +4,7 @@ import { updateLoginForm } from "../actions/loginForm.js"
 import { login } from "../actions/currentUser.js"
 
 
-const Login = ({loginFormData, updateLoginForm}) => { //username and password and the props being passed in
-    console.log(loginFormData)
+const Login = ({loginFormData, updateLoginForm, login}) => { //username and password and the props being passed in
     const handleInputChange = (e) => {
         const {name, value} = e.target;
         const updatedFormInfo = {
@@ -16,8 +15,8 @@ const Login = ({loginFormData, updateLoginForm}) => { //username and password an
     }
     
     const handleSubmit = e => {
-        e.preventDefault();
-        login(loginFormData)
+        e.preventDefault(); //prevents page refresh
+        login(loginFormData) 
     }
 
     return (
@@ -35,4 +34,4 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps, {updateLoginForm})(Login)
+export default connect(mapStateToProps, {updateLoginForm,login})(Login) // 'login' is an action creater

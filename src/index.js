@@ -11,13 +11,13 @@ import thunk  from 'redux-thunk';
 //Reducers
 import users from './reducers/users'
 
-const reducer = combineReducers({
-  users
-})
+// const reducer = combineReducers({
+//   users
+// })
 
-const composeEnhancer = window._REDUX_DEVTOOLS_EXTENSION_COMPOSE_ || compose;
+// const composeEnhancer = window._REDUX_DEVTOOLS_EXTENSION_COMPOSE_ || compose;
 
-const store = createStore(reducer, composeEnhancer(applyMiddleware(thunk)))
+// const store = createStore(reducer, composeEnhancer(applyMiddleware(thunk)))
 
 
 ReactDOM.render(

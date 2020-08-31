@@ -4,7 +4,7 @@ import thunk from 'redux-thunk';
 //reducers
 import users from './reducers/users'
 import currentUser from './reducers/currentUser'
-import login from './reducers/login'
+import login from './reducers/loginForm'
 
 const reducer = combineReducers({
     users,

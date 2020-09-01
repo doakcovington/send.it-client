@@ -8,6 +8,9 @@ import { getCurrentUser } from './actions/currentUser'
 //components
 import Nav from './components/Nav'
 
+//containers
+import MainContainer from './containers/ MainContainer'
+
 class App extends React.Component {
 
   componentDidMount() {
@@ -17,7 +20,10 @@ class App extends React.Component {
 
   render() {
     return (
-      <header className="header-container"><Nav /></header>
+      <div className="App">
+        <Nav />
+        <MainContainer />
+      </div>
     );
   }
 

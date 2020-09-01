@@ -6,6 +6,7 @@ import { getCurrentUser } from './actions/currentUser'
 
 //components
 import Login from './components/Login';
+import Logout from './components/Logout'
 
 class App extends React.Component {
 
@@ -16,17 +17,19 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <p>
-            We Don't Go To Ravenholm
-          </p>
-        </header>
+      <nav>       
         <Login />
-      </div>
+        <Logout />
+      </nav>
     );
   }
 
 }
 
-export default connect(null, { getCurrentUser })(App);
+const mapStateToProps = state => {
+  return {
+    currentUser: state
+  }
+}
+
+export default connect(mapStateToProps, { getCurrentUser })(App);

@@ -47,7 +47,7 @@ export const getCurrentUser = () => {
         if(user.error) {
           console.log(user.error)
         } else {
-          dispatch(setCurrentUser(user)) //invokes setCurrentUser action
+          dispatch(setCurrentUser(user.data)) //invokes setCurrentUser action
         }
       })
       .catch(console.log)

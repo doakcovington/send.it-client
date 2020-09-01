@@ -10,7 +10,7 @@ const Nav = ({currentUser}) => { //username and password and the props being pas
 
   return (
     <div>
-      <h2>{currentUser ? `${currentUser.data.attributes.username} is signed in` : "Please Sign In"}</h2>
+      <h2>{currentUser ? `${currentUser.attributes.username} is signed in` : "Please Sign In"}</h2>
       {currentUser ? <Logout /> : <Login />}
     </div>
   )

@@ -1,11 +1,12 @@
 import React from 'react';
+import "./App.css";
 import { connect } from 'react-redux'
 
 //actions
 import { getCurrentUser } from './actions/currentUser'
 
 //components
-import NavBar from './components/NavBar'
+import Nav from './components/Nav'
 
 class App extends React.Component {
 
@@ -16,7 +17,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div><NavBar /></div>
+      <header className="header-container"><Nav /></header>
     );
   }
 

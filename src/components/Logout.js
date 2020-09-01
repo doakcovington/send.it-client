@@ -6,7 +6,11 @@ import { logout } from "../actions/currentUser.js"
 const Logout = ({ logout }) => { //username and password and the props being passed in 
 
   return (
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={(e) => {
+        e.preventDefault()
+        logout()
+      }
+      }>
           <input type="submit" value="Log Out"></input>
       </form>
   )

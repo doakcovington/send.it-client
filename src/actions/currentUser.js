@@ -57,6 +57,7 @@ export const getCurrentUser = () => {
 //logout
 export const logout = () => {
   return (dispatch) => {
+    dispatch(clearCurrentUser()) //logs user out
     return fetch("http://localhost:5000/api/v1/logout", {
       credentials: "include", //sends cookies back
       method: "DELETE"     

@@ -2,8 +2,8 @@
 
 ## Doing
 
-- A user can sign out
-
 ## Done
 
 - A user can sign in
+- A user can sign out
+- Nav Bar

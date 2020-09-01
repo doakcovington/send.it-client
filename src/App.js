@@ -1,12 +1,12 @@
 import React from 'react';
+import "./App.css";
 import { connect } from 'react-redux'
 
 //actions
 import { getCurrentUser } from './actions/currentUser'
 
 //components
-import Login from './components/Login';
-import Logout from './components/Logout'
+import Nav from './components/Nav'
 
 class App extends React.Component {
 
@@ -17,19 +17,11 @@ class App extends React.Component {
 
   render() {
     return (
-      <nav>       
-        <Login />
-        <Logout />
-      </nav>
+      <header className="header-container"><Nav /></header>
     );
   }
 
 }
 
-const mapStateToProps = state => {
-  return {
-    currentUser: state
-  }
-}
 
-export default connect(mapStateToProps, { getCurrentUser })(App);
+export default connect(null, { getCurrentUser })(App);
